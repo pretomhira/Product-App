@@ -15,6 +15,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Products'),
         ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              ProductList(_userProductInput),
+            ],
+          ),
+        ),
       ),
     );
   }
