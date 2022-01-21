@@ -1,12 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:products/models/product.dart';
+import './widgets/productList.dart';
 
 void main(List<String> args) {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  
+  final List<Product>_userProductInput=[
+    Product(
+      id: '1',
+      name: 'test',
+      quantity: 1,
+      description: 'this is a test product',
+      date:  DateTime.now()
 
+    ),
+  
+  ];
+
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +32,7 @@ class MyApp extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              // ProductList(_userProductInput),
+              ProductList(_userProductInput),
             ],
           ),
         ),
