@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              ProductList(_userProductInput),
+              // ProductList(_userProductInput),
             ],
           ),
         ),
